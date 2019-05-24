@@ -12,7 +12,17 @@ The target of this project is to install both of these bundles (datasources/brok
 
 ## Demo
 
-If the bundle is deployed by copying it into the depoloy folder, it works completely fine. Thus, an mbean is exposed via Jolokia endpoint in the address: `http://localhost:8181/jolokia`. 
+If the bundle is deployed by copying it into the depoloy folder, it works completely fine. Thus, an mbean is exposed via Jolokia endpoint in the address: `http://localhost:8181/jolokia`.
+
+The broker connection is configured as follows in the file (`org.ops4j.connectionfactory-activemq.cfg`) of `datasources/broker-datasource` project:
+
+```
+jms.url=tcp://localhost:61616
+jms.username=system
+jms.password=manager
+type=activemq
+osgi.jndi.service.name=jms/eai.consumer
+```
 
 This mbean can be executed by passing this argument:
 

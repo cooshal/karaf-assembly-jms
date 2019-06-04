@@ -18,18 +18,29 @@ import services.BrokerMBean;
  */
 public class ActiveMQBrokerMBean implements BrokerMBean {
 
-    private final Connection brokerConnection;
+    private final ConnectionFactory connectionFactory;
 
     public ActiveMQBrokerMBean(ConnectionFactory connectionFactory) throws JMSException {
-        this.brokerConnection = connectionFactory.createConnection();
+        this.connectionFactory = connectionFactory;
     }
     
     @Override
     public String getQueueInfo(String queue) {
+        
+        Connection connection = null;
         try {
-            return this.brokerConnection.getMetaData().getJMSProviderName();
+            connection = this.connectionFactory.createConnection();
+            return connection.getMetaData().getJMSProviderName();
         } catch (JMSException ex) {
             Logger.getLogger(ActiveMQBrokerMBean.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if(connection != null) {
+                try {
+                    connection.close();
+                } catch (JMSException ex) {
+                    Logger.getLogger(ActiveMQBrokerMBean.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
         
         return "No Connection";

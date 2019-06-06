@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>Demo Web Console</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <security-constraint>
+        <display-name>authenticated</display-name>
+        <web-resource-collection>
+            <web-resource-name>management</web-resource-name>
+            <description/>
+            <url-pattern>/management/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>karaf</realm-name>
+    </login-config>
+    <security-role>
+        <description/>
+        <role-name>user</role-name>
+    </security-role>
+</web-app>

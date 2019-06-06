@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>stats-mbean</module>
+        <module>web-console</module>
     </modules>
 
 </project>

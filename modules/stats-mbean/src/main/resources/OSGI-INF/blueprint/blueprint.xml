@@ -8,7 +8,7 @@
              ">
 
     <!-- JMS Connection Factory reference -->
-    <reference id="jmsConnectionFactory" interface="javax.jms.ConnectionFactory" filter="(osgi.jndi.service.name=jms/eai.consumer)" availability="optional"  />
+    <reference id="jmsConnectionFactory" interface="javax.jms.ConnectionFactory" filter="(osgi.jndi.service.name=jms/eai.consumer)" availability="mandatory"  />
     
     <!-- broker mbean implementation bean initialization -->
     <bean id="brokerMBean" class="infrastructure.ActiveMQBrokerMBean">

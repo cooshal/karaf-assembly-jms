@@ -13,7 +13,6 @@
     <groupId>com.example.eai.modules</groupId>
     <artifactId>demo-web-console</artifactId>
     <packaging>bundle</packaging>
-
     <build>
         <plugins>
             <plugin>
@@ -24,7 +23,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Web-ContextPath>/management</Web-ContextPath>
+                        <Web-ContextPath>management</Web-ContextPath>
                         <Private-Package>*</Private-Package>
                         <Include-Resource>src</Include-Resource>
                         <_wab>src/main/webapp</_wab>

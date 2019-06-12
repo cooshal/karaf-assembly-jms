@@ -187,6 +187,7 @@
                         <feature>transaction</feature>
                         <feature>jms</feature>
                         <feature>jolokia</feature>
+                        <feature>war</feature>
 
                         <feature>ks-broker-datasource</feature>
                         

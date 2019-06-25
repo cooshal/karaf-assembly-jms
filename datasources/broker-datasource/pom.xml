@@ -17,7 +17,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <datasource.configfile.name>org.ops4j.connectionfactory-activemq.cfg</datasource.configfile.name>
+        <producer.config.name>org.ops4j.connectionfactory-producer.cfg</producer.config.name>
+        <consumer.config.name>org.ops4j.connectionfactory-consumer.cfg</consumer.config.name>
     </properties>
 
     <build>
@@ -63,7 +64,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <executions>
@@ -84,7 +85,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

@@ -17,6 +17,8 @@
     <modules>
         <module>stats-mbean</module>
         <module>web-console</module>
+        <module>message-consumer</module>
+        <module>message-producer</module>
     </modules>
 
 </project>

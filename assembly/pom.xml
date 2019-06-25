@@ -76,6 +76,13 @@
     <dependencies>
         <!-- camel -->
         <dependency>
+            <groupId>org.apache.camel.karaf</groupId>
+            <artifactId>apache-camel</artifactId>
+            <classifier>features</classifier>
+            <type>xml</type>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
             <groupId>com.example.eai.datasources</groupId>
             <artifactId>ks-broker-datasource</artifactId>
             <version>1.1.1</version>
@@ -188,6 +195,11 @@
                         <feature>jms</feature>
                         <feature>jolokia</feature>
                         <feature>war</feature>
+
+                        <!--  camel -->                
+                        <feature>camel</feature>
+                        <feature>camel-sql</feature>
+                        <feature>camel-jms</feature>
 
                         <feature>ks-broker-datasource</feature>
                         

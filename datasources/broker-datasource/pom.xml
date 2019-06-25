@@ -17,7 +17,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <datasource.configfile.name>org.ops4j.connectionfactory-activemq.cfg</datasource.configfile.name>
+        <datasource.configfile.name>eai.broker.cfg</datasource.configfile.name>
     </properties>
 
     <build>

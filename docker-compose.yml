@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  prs-broker:
+    image: webcenter/activemq:5.14.3
+    ports:
+      - "8161:8161"
+      - "61616:61616"
+      - "61613:61613"
+    environment:
+      - ACTIVEMQ_CONFIG_MINMEMORY=512
+      - ACTIVEMQ_CONFIG_MAXMEMORY=2048
